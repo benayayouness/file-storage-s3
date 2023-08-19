@@ -1,0 +1,24 @@
+
+spring:
+  cloud:
+    aws:
+      s3:
+        endpoint: http://s3.localhost.localstack.cloud:4566
+        region: eu-central-1
+      credentials:
+        access-key: none
+        secret-key: none
+      region:
+        static: eu-central-1
+
+  application:
+    bucket:
+      name: mybucket
+
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2MB
+      max-file-size: 5MB
+      max-request-size: 10MB
+
